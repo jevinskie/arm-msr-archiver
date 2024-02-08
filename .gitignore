@@ -1,0 +1,15 @@
+# Python
+**/__pycache__/
+/build/
+/arm_mra_archiver.egg-info/
+/arm_mra_archiver/_version.py
+**/*.pyc
+**/.mypy_cache/
+**/.ruff_cache/
+**/.pyre/
+
+# VS Code
+**/.vscode
+
+# PyCharm
+**/.idea/

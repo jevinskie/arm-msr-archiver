@@ -1,2 +1,2 @@
-# arm-msr-archiver
-Archiving utilities for the Arm Machine Readable Specifications (MSR) XML files
+# arm-mra-archiver
+Archiving utilities for the Arm Machine Readable Architecture (MRA) XML files
