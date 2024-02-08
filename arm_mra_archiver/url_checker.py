@@ -3,7 +3,6 @@ import typing
 from functools import cached_property
 
 import requests
-from urllib3.util.url import Url
 
 from .url_bundle import URLBundle
 
@@ -11,9 +10,9 @@ log = logging.getLogger("arm-mra-archiver:url_checker")
 
 
 class URLChecker:
-    def url_is_live(self, url: Url) -> bool:
+    def url_is_live(self, url: str) -> bool:
         try:
-            resp = self.session.head(str(url))
+            resp = self.session.head(url)
         except requests.RequestException as e:
             log.exception(f"Got exception requesting HEAD on {url}.", exc_info=e)
             return False
@@ -34,9 +33,4 @@ def get_live_urls(url_bundles: tuple[URLBundle, ...]) -> tuple[URLBundle, ...]:
         bndl.aarch64_url_live = chk.url_is_live(bndl.aarch64_url)
         bndl.aarch32_url_live = chk.url_is_live(bndl.aarch32_url)
 
-    return tuple(
-        filter(
-            lambda b: any((b.sysreg_url_live, b.aarch64_url_live, b.aarch32_url_live)),
-            url_bundles,
-        )
-    )
+    return tuple(filter(lambda b: b.any_live, url_bundles))
