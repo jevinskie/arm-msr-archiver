@@ -29,6 +29,7 @@ from .url_bundle import URLBundle
 # https://developer.arm.com/-/cdn-downloads/permalink/Exploration-Tools-Arm-Architecture-System-Registers/SysReg/SysReg_xml_A_profile-2024-12.tar.gz
 # https://developer.arm.com/-/cdn-downloads/permalink/Exploration-Tools-A64-ISA/ISA_A64/ISA_A64_xml_A_profile-2024-12.tar.gz
 # https://developer.arm.com/-/cdn-downloads/permalink/Exploration-Tools-AArch32-ISA/ISA_AArch32/ISA_AArch32_xml_A_profile-2024-12.tar.gz
+# https://developer.arm.com/-/cdn-downloads/permalink/Exploration-Tools-OS-Machine-Readable-Data/AARCHMRS_BSD/AARCHMRS_BSD_A_profile-2024-12.tar.gz
 
 v8_v1_url_template: Final = "https://developer.arm.com/-/media/developer/products/architecture/armv8-a-architecture/{v8_v1_type_ver}00bet{v8_beta_ver}.tar.gz"
 v8_v2_url_template: Final = "https://developer.arm.com/-/media/developer/products/architecture/armv8-a-architecture/{v8_v2_date}/{v8_v2_type}_xml_v{v8_v2_major_ver}A-{v8_v2_date}.tar.gz"
