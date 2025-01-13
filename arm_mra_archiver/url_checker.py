@@ -16,9 +16,7 @@ class URLChecker:
         except requests.RequestException as e:
             log.exception(f"Got exception requesting HEAD on {url}.", exc_info=e)
             return False
-        requests.status_codes.codes.ok = typing.cast(
-            int, requests.status_codes.codes.ok
-        )
+        requests.status_codes.codes.ok = typing.cast(int, requests.status_codes.codes.ok)
         return resp.status_code == requests.status_codes.codes.ok
 
     @cached_property
