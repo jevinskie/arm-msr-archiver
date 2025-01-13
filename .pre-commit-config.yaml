@@ -50,12 +50,12 @@ repos:
   hooks:
   - id: mypy
     args: [--strict]
-    additional_dependencies: [aiohttp>=3.11.11, attrs>=24.3.0, cattrs>=24.1.2, orjson>=3.10.14, packaging>=24.2, path>=17.1.0, pretty-errors>=1.2.25, requests>=2.32.3, rich>=13.9.4, urllib3>=2.3.0, types-requests>=2.32.0.20241016]
+    additional_dependencies: [aiohttp>=3.11.11, attrs>=24.3.0, cattrs>=24.1.2, orjson>=3.10.14, packaging>=24.2, path>=17.1.0, pretty-errors>=1.2.25, requests>=2.32.3, rich>=13.9.4, tqdm>=4.67.1, urllib3>=2.3.0, types-requests>=2.32.0.20241016, types-tqdm>=4.67.0.20241221]
 - repo: https://github.com/RobertCraigie/pyright-python
   rev: v1.1.391
   hooks:
   - id: pyright
-    additional_dependencies: [aiohttp>=3.11.11, attrs>=24.3.0, cattrs>=24.1.2, orjson>=3.10.14, packaging>=24.2, path>=17.1.0, pretty-errors>=1.2.25, requests>=2.32.3, rich>=13.9.4, urllib3>=2.3.0, types-requests>=2.32.0.20241016]
+    additional_dependencies: [aiohttp>=3.11.11, attrs>=24.3.0, cattrs>=24.1.2, orjson>=3.10.14, packaging>=24.2, path>=17.1.0, pretty-errors>=1.2.25, requests>=2.32.3, rich>=13.9.4, tqdm>=4.67.1, urllib3>=2.3.0, types-requests>=2.32.0.20241016, types-tqdm>=4.67.0.20241221]
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v5.0.0
   hooks:
